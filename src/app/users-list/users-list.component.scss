@@ -1,0 +1,90 @@
+$color: #555;
+$main-background: #5B9EED;
+$white: #fff;
+$white-two: #aaa;
+body {
+    color: #555;
+    background-color: #5B9EED;
+    font-family: sans-serif;
+}
+
+.list-wrapper {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.list {
+    background: $white;
+    border-radius: 2px;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.list-item {
+    display: flex;
+    margin: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &:last-child {
+        border-bottom: none;
+    }
+    &-image {
+        border-radius: 50%;
+        width: 64px;
+    }
+    &-content {
+        margin-left: 20px;
+        h4,
+        p {
+            margin: 0;
+        }
+        h4 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        p {
+            margin-top: 5px;
+            color: $white-two;
+        }
+    }
+}
+
+.list-item:hover {
+    background-color: rgb(231, 230, 230);
+    cursor: help;
+}
+
+.fa-plus-circle {
+    font-size: 48px;
+    color: red;
+}
+
+.fa-trash {
+    font-size: 36px;
+    color: red;
+}
+
+.fa-trash:hover {
+    color: rgb(124, 7, 7);
+    cursor: pointer;
+}
+
+.fa-edit {
+    font-size: 36px;
+    color: rgb(47, 0, 255);
+}
+
+.fa-edit:hover {
+    color: rgb(0, 2, 141);
+    cursor: pointer;
+}
+
+.action-container {
+    display: flex;
+}
+
+.action-container button {
+    border: transparent;
+    background-color: transparent;
+}
