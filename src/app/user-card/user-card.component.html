@@ -1,13 +1,15 @@
-<div class="card">
-    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar">
+<div class="card" *ngIf="user">
+    <img src={{user.imageUrl}} alt="Avatar">
     <div class="container">
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
+        <h5>@{{user.poste}}</h5>
+        <h4><b>{{user.nom | uppercase}} {{user.prenom | titlecase}}</b></h4>
+        <p>{{user.email}}</p>
+        <p>{{user.phone}}</p>
+        <h4><b>Adresse</b></h4>
+        <p>{{user.pays}}</p>
+        <p>{{user.ville}}</p>
+        <p>{{user.rue}}</p>
+        <p>{{user.codepost}}</p>
+        <p>Créer {{user.createdDate | date:'à HH:mm, le d MMM yyyy'}}</p>
     </div>
 </div>
