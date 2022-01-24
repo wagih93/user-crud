@@ -1,51 +1,57 @@
 <legend>Ajout Utilisateur</legend>
-<form action="">
-
+<form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+    <!--  -->
     <div class="colums">
         <div class="item">
-            <label for="fname">Prénom<span>*</span></label>
-            <input id="fname" type="text" name="fname" />
+            <label for="fname">Prénom</label>
+            <input id="prenom" type="text" formControlName="prenom" />
         </div>
         <div class="item">
-            <label for="lname">Nom<span>*</span></label>
-            <input id="lname" type="text" name="lname" />
+            <label for="lname">Nom</label>
+            <input id="nom" type="text" formControlName="nom" />
         </div>
         <div class="item">
-            <label for="address">Adresse Email<span>*</span></label>
-            <input id="address" type="text" name="address" />
+            <label for="email">Adresse Email</label>
+            <input id="email" type="email" formControlName="email" />
         </div>
         <div class="item">
             <label for="phone">Numéro Téléphone</label>
-            <input id="phone" type="tel" name="phone" />
+            <input id="phone" type="tel" formControlName="phone" />
         </div>
+        <span style="width: 100%;background-color: antiquewhite;">ADRESSE</span>
         <div class="item">
             <label for="saddress">Rue</label>
-            <input id="saddress" type="text" name="city" />
+            <input id="saddress" type="text" formControlName="rue" />
         </div>
         <div class="item">
             <label for="city">Ville</label>
-            <input id="city" type="text" name="city" />
+            <input id="city" type="text" formControlName="ville" />
         </div>
         <div class="item">
             <label for="zip">Code Postal</label>
-            <input id="zip" type="text" name="zip" />
+            <input id="zip" type="number" formControlName="codepost" />
         </div>
         <div class="item">
             <label for="country">Pays</label>
-            <input id="country" type="text" name="text" />
+            <input id="country" type="text" formControlName="pays" />
         </div>
         <div class="item">
             <label for="poste">Poste</label>
-            <input id="poste" type="text" name="text" />
+            <input id="poste" type="text" formControlName="poste" />
         </div>
         <div class="item">
-            <label for="poste">ROLE</label>
-            <select name="ROLES" id="role-select">
+            <label for="poste">Role</label>
+            <select formControlName="role" id="role-select">
               <option value="USER">USER</option>
               <option value="ADMIN">ADMIN</option>
-
           </select>
         </div>
+        <div class="item">
+            <label for="image">ImageUrl</label>
+            <input id="image" type="text" formControlName="imageUrl" />
+        </div>
     </div>
-    <button type="submit">Confirmer</button>
+    <button type="submit" [disabled]="userForm.invalid">Confirmer</button>
+    <br>
+    <!-- <br> {{userForm.value|json}} -->
 </form>

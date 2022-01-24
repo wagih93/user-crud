@@ -8,11 +8,6 @@ body {
     font-family: sans-serif;
 }
 
-.list-wrapper {
-    max-width: 400px;
-    margin: 50px auto;
-}
-
 .list {
     background: $white;
     border-radius: 2px;
@@ -34,7 +29,7 @@ body {
         width: 64px;
     }
     &-content {
-        margin-left: 20px;
+        width: 240px;
         h4,
         p {
             margin: 0;
@@ -53,11 +48,6 @@ body {
 .list-item:hover {
     background-color: rgb(231, 230, 230);
     cursor: help;
-}
-
-.fa-plus-circle {
-    font-size: 48px;
-    color: red;
 }
 
 .fa-trash {
