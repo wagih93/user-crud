@@ -64,12 +64,14 @@ export class UserService {
   editUser(id: string, data: User) {
     let index = this.users.findIndex(x => x.id === id);
     this.users[index] = data;
-    console.log('user with'+index+'updated');
+    this.userSubject.next(this.users);
+    console.log('user with'+index+'is updated');
   }
 
   deleteUser(id: string) {
     let index = this.users.findIndex(x => x.id === id);
     this.users.splice(index, 1);
+    this.userSubject.next(this.users);
   }
 
 }

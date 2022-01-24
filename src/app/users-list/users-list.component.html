@@ -13,6 +13,7 @@
             <div class="action-container">
                 <button routerLink="/editUser/{{user.id}}" class="edit-btn"><i class="fa fa-edit" ></i></button>
                 <button (click)="onDeleteUser(user.id)" class="delete-btn"><i class="fa fa-trash" ></i></button>
+                <button (click)="onCheckUser(user.id)"><i class="fa fa-eye"></i></button>
             </div>
         </li>
     </ul>
