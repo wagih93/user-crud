@@ -70,6 +70,16 @@ body {
     cursor: pointer;
 }
 
+.fa-eye {
+    font-size: 36px;
+    color: rgb(26, 151, 4);
+}
+
+.fa-eye:hover {
+    color: rgb(14, 85, 2);
+    cursor: pointer;
+}
+
 .action-container {
     display: flex;
 }
