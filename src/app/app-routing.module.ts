@@ -14,6 +14,7 @@ const routes: Routes = [
   {path : 'addUser',component: UserFormComponent},
   {path : 'editUser/:id',component: UserFormComponent},
   {path : 'deleteUser/:id',component: UsersListComponent},
+  {path : 'userCard/:id',component: UserCardComponent},
 ];
 
 @NgModule({

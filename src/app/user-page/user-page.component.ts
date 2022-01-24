@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-user-page',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-page.component.scss']
 })
 export class UserPageComponent implements OnInit {
+  user!: User;
 
-  constructor() { }
-
+  constructor() {
+  }
+  receiveUser(receivedUser: User) {
+    this.user=receivedUser;
+    console.log('receiveUser= '+this.user.email)
+  }
   ngOnInit(): void {
   }
 
