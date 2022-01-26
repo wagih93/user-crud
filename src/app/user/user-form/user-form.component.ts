@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from '../models/user.model';
-import { UserService } from '../services/user.service';
+import { User } from '../../core/entities/user.model';
+import { UserService } from '../../core/services/user.service';
 import { v4 as uuidv4 } from 'uuid';
 
 @Component({

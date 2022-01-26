@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../models/user.model';
+import { User } from '../../core/entities/user.model';
 
 @Component({
   selector: 'app-user-page',

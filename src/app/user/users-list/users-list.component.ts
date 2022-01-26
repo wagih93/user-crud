@@ -1,8 +1,8 @@
 import { Component, Input, OnDestroy, OnInit, Output,EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { User } from '../models/user.model';
-import { UserService } from '../services/user.service';
+import { User } from '../../core/entities/user.model';
+import { UserService } from '../../core/services/user.service';
 
 @Component({
   selector: 'app-users-list',
