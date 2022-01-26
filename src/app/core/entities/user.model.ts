@@ -13,5 +13,6 @@ export interface User {
   role: string;
   imageUrl: string;
   createdDate: Date;
+  modificationDate: Date;
 }
 

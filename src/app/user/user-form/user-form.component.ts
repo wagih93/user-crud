@@ -13,6 +13,7 @@ import { v4 as uuidv4 } from 'uuid';
 export class UserFormComponent implements OnInit {
   userForm: FormGroup;
   userId: string;
+  fulluser!: User;
   constructor(private userService: UserService,
     private formBuilder: FormBuilder,
     private router: Router,
@@ -35,19 +36,19 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.userId) {
-      const user = this.userService.getUserById(this.userId);
+      this.fulluser = this.userService.getUserById(this.userId);
       this.userForm.setValue({
-        prenom: user.prenom,
-        nom: user.nom,
-        email: user.email,
-        phone: user.phone,
-        rue: user.rue,
-        ville: user.ville,
-        pays: user.pays,
-        codepost: user.codepost,
-        poste: user.poste,
-        role: user.role,
-        imageUrl: user.imageUrl
+        prenom: this.fulluser.prenom,
+        nom: this.fulluser.nom,
+        email: this.fulluser.email,
+        phone: this.fulluser.phone,
+        rue: this.fulluser.rue,
+        ville: this.fulluser.ville,
+        pays: this.fulluser.pays,
+        codepost: this.fulluser.codepost,
+        poste: this.fulluser.poste,
+        role: this.fulluser.role,
+        imageUrl: this.fulluser.imageUrl
       });
     }
   }
@@ -55,7 +56,8 @@ export class UserFormComponent implements OnInit {
   onSubmitForm() {
     const user = this.userForm.value as User;
     if (this.userId) {
-      this.userService.editUser(this.userId,user);
+      this.fulluser.modificationDate = new Date();
+      this.userService.editUser(this.userId, this.fulluser);
       this.router.navigate(['usersPage']);
       console.log('user updated');
     } else {
