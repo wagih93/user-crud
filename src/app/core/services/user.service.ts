@@ -21,7 +21,8 @@ export class UserService implements OnInit {
       imageUrl: 'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTQ3Mzg1Mzg5MzI4NDQzMDYz/tupac_shakur_photo_by_steve_eichner_archive_photos_getty_83928439.jpg',
       poste: 'CEO',
       role: 'ADMIN',
-      createdDate: new Date()
+      createdDate: new Date(),
+      modificationDate:new Date()
     },
     {
       id: '2',
@@ -36,7 +37,8 @@ export class UserService implements OnInit {
       imageUrl: 'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTQ3Mzg1Mzg5MzI4NDQzMDYz/tupac_shakur_photo_by_steve_eichner_archive_photos_getty_83928439.jpg',
       poste: 'Co-founder',
       role: 'USER',
-      createdDate: new Date()
+      createdDate: new Date(),
+      modificationDate:new Date()
     },
   ];
   userSubject = new BehaviorSubject<User[]>(this.users);
