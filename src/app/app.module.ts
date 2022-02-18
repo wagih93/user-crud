@@ -4,29 +4,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NavComponent } from './template/nav/nav.component';
-import { UsersListComponent } from './user/users-list/users-list.component';
-import { UserCardComponent } from './user/user-card/user-card.component';
-import { UserPageComponent } from './user/user-page/user-page.component';
-import { UserFormComponent } from './user/user-form/user-form.component';
+import { UserModule } from './user/user.module';
+import { TempModule } from './template/nav/template.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavComponent,
-    UsersListComponent,
-    UserCardComponent,
-    UserPageComponent,
-    UserFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
+    UserModule,
+    TempModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
